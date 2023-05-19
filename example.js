@@ -1,7 +1,3 @@
-import { init } from "@catsjs/core";
-
-const { api, json } = await init();
-
 describe(
   {
     title: "Star Wars API",

@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 6,
-    "tests": 5,
-    "passes": 2,
+    "suites": 5,
+    "tests": 7,
+    "passes": 4,
     "pending": 0,
     "failures": 3,
-    "start": "2023-05-19T12:56:00.334Z",
-    "end": "2023-05-19T12:56:36.628Z",
-    "duration": 36294,
-    "testsRegistered": 5,
-    "passPercent": 40,
+    "start": "2023-05-19T14:02:44.528Z",
+    "end": "2023-05-19T14:02:46.628Z",
+    "duration": 2100,
+    "testsRegistered": 7,
+    "passPercent": 57.14285714285714,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "1626419e-242b-4639-8b35-5524610c5b2d",
+      "uuid": "5350d148-fcec-4b52-954a-8c729b24cfe4",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js",
+      "file": "\\spec\\newAirports.test.js",
       "beforeHooks": [
         {
           "title": "Setup in \"{root}\"",
           "fullTitle": "Setup in \"{root}\"",
           "timedOut": false,
-          "duration": 0,
+          "duration": 1,
           "state": null,
           "speed": null,
           "pass": false,
@@ -36,8 +36,8 @@
           "context": null,
           "code": "const hooks = getHooks();\nthis.test.parent.project = { ...options };\nfor (let i = 0; i < hooks.length; i++) {\n  addContext(this, hooks[i]);\n}\nthis.test.originalTitle = \"Setup\";\nthis.test.options = { empty: hooks.length === 0 };",
           "err": {},
-          "uuid": "0a8cb209-30d9-4a71-b968-86810e3d5f48",
-          "parentUUID": "1626419e-242b-4639-8b35-5524610c5b2d",
+          "uuid": "5125aa95-01a9-494c-8a6e-c077a49a7348",
+          "parentUUID": "5350d148-fcec-4b52-954a-8c729b24cfe4",
           "isHook": true,
           "skipped": false,
           "options": {
@@ -49,105 +49,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "aff1c162-f780-495c-953e-9025622ad014",
-          "title": "Star Wars API",
-          "fullFile": "C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\example.js",
-          "file": "\\spec\\example.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [],
-          "suites": [
-            {
-              "uuid": "ac1dbefd-b3ce-49bb-8a4b-c421b423769c",
-              "title": "Starships",
-              "fullFile": "C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\example.js",
-              "file": "\\spec\\example.js",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "The Millenium Falcon can take 4 crew members and 6 passengers",
-                  "fullTitle": "Star Wars API Starships The Millenium Falcon can take 4 crew members and 6 passengers",
-                  "timedOut": false,
-                  "duration": 283,
-                  "state": "passed",
-                  "speed": "medium",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": \"GET https://swapi.dev/api/starships/10/ HTTP/1.1\\n\",\n    \"language\": \"http\"\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": \"Status Code: 200\\nserver: nginx/1.16.1\\ndate: Fri, 19 May 2023 12:56:00 GMT\\ncontent-type: application/json\\ntransfer-encoding: chunked\\nconnection: close\\nvary: Accept, Cookie\\nx-frame-options: SAMEORIGIN\\netag: \\\"787ecb1fbae329ffafed92aec29ad8ac\\\"\\nallow: GET, HEAD, OPTIONS\\nstrict-transport-security: max-age=15768000\\n\\n{\\\"name\\\":\\\"Millennium Falcon\\\",\\\"model\\\":\\\"YT-1300 light freighter\\\",\\\"manufacturer\\\":\\\"Corellian Engineering Corporation\\\",\\\"cost_in_credits\\\":\\\"100000\\\",\\\"length\\\":\\\"34.37\\\",\\\"max_atmosphering_speed\\\":\\\"1050\\\",\\\"crew\\\":\\\"4\\\",\\\"passengers\\\":\\\"6\\\",\\\"cargo_capacity\\\":\\\"100000\\\",\\\"consumables\\\":\\\"2 months\\\",\\\"hyperdrive_rating\\\":\\\"0.5\\\",\\\"MGLT\\\":\\\"75\\\",\\\"starship_class\\\":\\\"Light freighter\\\",\\\"pilots\\\":[\\\"https://swapi.dev/api/people/13/\\\",\\\"https://swapi.dev/api/people/14/\\\",\\\"https://swapi.dev/api/people/25/\\\",\\\"https://swapi.dev/api/people/31/\\\"],\\\"films\\\":[\\\"https://swapi.dev/api/films/1/\\\",\\\"https://swapi.dev/api/films/2/\\\",\\\"https://swapi.dev/api/films/3/\\\"],\\\"created\\\":\\\"2014-12-10T16:59:45.094000Z\\\",\\\"edited\\\":\\\"2014-12-20T21:23:49.880000Z\\\",\\\"url\\\":\\\"https://swapi.dev/api/starships/10/\\\"}\",\n    \"language\": \"http\"\n  }\n]",
-                  "code": "api\n              .get(\"/starships/10/\")\n              .expect(200)\n              .expect(\"Content-Type\", \"application/json\")\n              .expect((res) =>\n                json.of(res.body).matches({\n                  crew: \"4\",\n                  passengers: \"6\",\n                })",
-                  "err": {},
-                  "uuid": "00aa0acd-19b3-458f-a31e-c2a9e9374d09",
-                  "parentUUID": "ac1dbefd-b3ce-49bb-8a4b-c421b423769c",
-                  "isHook": false,
-                  "skipped": false,
-                  "options": {
-                    "title": "The Millenium Falcon can take 4 crew members and 6 passengers",
-                    "description": "Should pass."
-                  }
-                },
-                {
-                  "title": "An X-wing can take 1 pilot and 2 passengers",
-                  "fullTitle": "Star Wars API Starships An X-wing can take 1 pilot and 2 passengers",
-                  "timedOut": false,
-                  "duration": 130,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
-                  "pending": false,
-                  "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": \"GET https://swapi.dev/api/starships/12/ HTTP/1.1\\n\",\n    \"language\": \"http\"\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": \"Status Code: 200\\nserver: nginx/1.16.1\\ndate: Fri, 19 May 2023 12:56:00 GMT\\ncontent-type: application/json\\ntransfer-encoding: chunked\\nconnection: close\\nvary: Accept, Cookie\\nx-frame-options: SAMEORIGIN\\netag: \\\"729305bed52fce80a67e20f246e3a19e\\\"\\nallow: GET, HEAD, OPTIONS\\nstrict-transport-security: max-age=15768000\\n\\n{\\\"name\\\":\\\"X-wing\\\",\\\"model\\\":\\\"T-65 X-wing\\\",\\\"manufacturer\\\":\\\"Incom Corporation\\\",\\\"cost_in_credits\\\":\\\"149999\\\",\\\"length\\\":\\\"12.5\\\",\\\"max_atmosphering_speed\\\":\\\"1050\\\",\\\"crew\\\":\\\"1\\\",\\\"passengers\\\":\\\"0\\\",\\\"cargo_capacity\\\":\\\"110\\\",\\\"consumables\\\":\\\"1 week\\\",\\\"hyperdrive_rating\\\":\\\"1.0\\\",\\\"MGLT\\\":\\\"100\\\",\\\"starship_class\\\":\\\"Starfighter\\\",\\\"pilots\\\":[\\\"https://swapi.dev/api/people/1/\\\",\\\"https://swapi.dev/api/people/9/\\\",\\\"https://swapi.dev/api/people/18/\\\",\\\"https://swapi.dev/api/people/19/\\\"],\\\"films\\\":[\\\"https://swapi.dev/api/films/1/\\\",\\\"https://swapi.dev/api/films/2/\\\",\\\"https://swapi.dev/api/films/3/\\\"],\\\"created\\\":\\\"2014-12-12T11:19:05.340000Z\\\",\\\"edited\\\":\\\"2014-12-20T21:23:49.886000Z\\\",\\\"url\\\":\\\"https://swapi.dev/api/starships/12/\\\"}\",\n    \"language\": \"http\"\n  }\n]",
-                  "code": "api\n              .get(\"/starships/12/\")\n              .expect(200)\n              .expect(\"Content-Type\", \"application/json\")\n              .expect((res) =>\n                json.of(res.body).matches({\n                  crew: \"1\",\n                  passengers: \"2\",\n                })",
-                  "err": {
-                    "message": "AssertionError: {passengers: '0'} didn't match target {passengers: '2'}",
-                    "estack": null,
-                    "diff": "   \"cost_in_credits\": \"149999\",\n   \"length\": \"12.5\",\n   \"max_atmosphering_speed\": \"1050\",\n   \"crew\": \"1\",\n-   \"passengers\": \"0\",\n+   \"passengers\": \"2\",\n   \"cargo_capacity\": \"110\",\n   \"consumables\": \"1 week\",\n   \"hyperdrive_rating\": \"1.0\",\n   \"MGLT\": \"100\",\n"
-                  },
-                  "uuid": "589e2dc7-e0ac-45ac-8b84-2ab21db3dbab",
-                  "parentUUID": "ac1dbefd-b3ce-49bb-8a4b-c421b423769c",
-                  "isHook": false,
-                  "skipped": false,
-                  "options": {
-                    "title": "An X-wing can take 1 pilot and 2 passengers",
-                    "description": "Should fail, change `2` to `0` to make it pass."
-                  }
-                }
-              ],
-              "suites": [],
-              "passes": [
-                "00aa0acd-19b3-458f-a31e-c2a9e9374d09"
-              ],
-              "failures": [
-                "589e2dc7-e0ac-45ac-8b84-2ab21db3dbab"
-              ],
-              "pending": [],
-              "skipped": [],
-              "duration": 413,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 60000,
-              "options": {
-                "title": "Starships",
-                "description": "Some assertions about famous starships."
-              }
-            }
-          ],
-          "passes": [],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 0,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 60000,
-          "options": {
-            "title": "Star Wars API",
-            "description": "This example spec uses the [Star Wars API](https://swapi.dev)."
-          }
-        },
-        {
-          "uuid": "9222b4f1-ab65-4eef-ad65-7b958c4d2410",
+          "uuid": "1030f6ee-291f-47e0-81f1-c0e1e7dbd31b",
           "title": "Airport Gap API",
           "fullFile": "C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js",
           "file": "\\spec\\newAirports.test.js",
@@ -156,7 +58,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "f463eaf0-337f-4f48-9558-5bd43780253a",
+              "uuid": "575893f7-5a16-43d2-8bc1-fbed8a40040f",
               "title": "GET /airports",
               "fullFile": "C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js",
               "file": "\\spec\\newAirports.test.js",
@@ -167,17 +69,17 @@
                   "title": "returns all airports, limited to 30 per page",
                   "fullTitle": "Airport Gap API GET /airports returns all airports, limited to 30 per page",
                   "timedOut": false,
-                  "duration": 850,
+                  "duration": 823,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
-                  "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": \"GET https://airportgap.dev-tester.com/api/airports HTTP/1.1\\n\",\n    \"language\": \"http\"\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": \"Status Code: 200\\ndate: Fri, 19 May 2023 12:56:01 GMT\\ncontent-type: application/json; charset=utf-8\\ntransfer-encoding: chunked\\nconnection: close\\nvary: Accept-Encoding, Origin\\nx-frame-options: SAMEORIGIN\\nx-xss-protection: 0\\nx-content-type-options: nosniff\\nx-download-options: noopen\\nx-permitted-cross-domain-policies: none\\nreferrer-policy: strict-origin-when-cross-origin\\netag: W/\\\"37f4286d3dd3278024683e8b0b63f0fa\\\"\\ncache-control: max-age=0, private, must-revalidate\\nx-request-id: 5195b40b-e182-49ef-a0a3-0482d3ff742c\\nx-runtime: 0.048142\\nstrict-transport-security: max-age=15724800; includeSubdomains\\ncontent-encoding: gzip\\ncf-cache-status: DYNAMIC\\nreport-to: {\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=MAjMQgg8QOyOH%2B76Mxkjtrcz4e41npEnwCiImDLpJp4TgwnAl8FPFociF%2B2IGL9f18niR2GFpM6YT5kRX%2FsYqYbddr7yNnayjc1ZKVMxOssuF5xN9ONpci3qfhF0vbEv4qcFPcixsgOgIMk2VeIi55X9BPDaPdRF\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nnel: {\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nserver: cloudflare\\ncf-ray: 7c9c7f5daa72bba1-FRA\\nalt-svc: h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\\n\\n{\\\"data\\\":[{\\\"id\\\":\\\"GKA\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Goroka Airport\\\",\\\"city\\\":\\\"Goroka\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"GKA\\\",\\\"icao\\\":\\\"AYGA\\\",\\\"latitude\\\":\\\"-6.08169\\\",\\\"longitude\\\":\\\"145.391998\\\",\\\"altitude\\\":5282,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"MAG\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Madang Airport\\\",\\\"city\\\":\\\"Madang\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"MAG\\\",\\\"icao\\\":\\\"AYMD\\\",\\\"latitude\\\":\\\"-5.20708\\\",\\\"longitude\\\":\\\"145.789001\\\",\\\"altitude\\\":20,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"HGU\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Mount Hagen Kagamuga Airport\\\",\\\"city\\\":\\\"Mount Hagen\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"HGU\\\",\\\"icao\\\":\\\"AYMH\\\",\\\"latitude\\\":\\\"-5.82679\\\",\\\"longitude\\\":\\\"144.296005\\\",\\\"altitude\\\":5388,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"LAE\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Nadzab Airport\\\",\\\"city\\\":\\\"Nadzab\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"LAE\\\",\\\"icao\\\":\\\"AYNZ\\\",\\\"latitude\\\":\\\"-6.569803\\\",\\\"longitude\\\":\\\"146.725977\\\",\\\"altitude\\\":239,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"POM\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Port Moresby Jacksons International Airport\\\",\\\"city\\\":\\\"Port Moresby\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"POM\\\",\\\"icao\\\":\\\"AYPY\\\",\\\"latitude\\\":\\\"-9.44338\\\",\\\"longitude\\\":\\\"147.220001\\\",\\\"altitude\\\":146,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"WWK\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Wewak International Airport\\\",\\\"city\\\":\\\"Wewak\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"WWK\\\",\\\"icao\\\":\\\"AYWK\\\",\\\"latitude\\\":\\\"-3.58383\\\",\\\"longitude\\\":\\\"143.669006\\\",\\\"altitude\\\":19,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"UAK\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Narsarsuaq Airport\\\",\\\"city\\\":\\\"Narssarssuaq\\\",\\\"country\\\":\\\"Greenland\\\",\\\"iata\\\":\\\"UAK\\\",\\\"icao\\\":\\\"BGBW\\\",\\\"latitude\\\":\\\"61.1605\\\",\\\"longitude\\\":\\\"-45.425999\\\",\\\"altitude\\\":112,\\\"timezone\\\":\\\"America/Godthab\\\"}},{\\\"id\\\":\\\"GOH\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Godthaab / Nuuk Airport\\\",\\\"city\\\":\\\"Godthaab\\\",\\\"country\\\":\\\"Greenland\\\",\\\"iata\\\":\\\"GOH\\\",\\\"icao\\\":\\\"BGGH\\\",\\\"latitude\\\":\\\"64.190903\\\",\\\"longitude\\\":\\\"-51.678101\\\",\\\"altitude\\\":283,\\\"timezone\\\":\\\"America/Godthab\\\"}},{\\\"id\\\":\\\"SFJ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Kangerlussuaq Airport\\\",\\\"city\\\":\\\"Sondrestrom\\\",\\\"country\\\":\\\"Greenland\\\",\\\"iata\\\":\\\"SFJ\\\",\\\"icao\\\":\\\"BGSF\\\",\\\"latitude\\\":\\\"67.012222\\\",\\\"longitude\\\":\\\"-50.711603\\\",\\\"altitude\\\":165,\\\"timezone\\\":\\\"America/Godthab\\\"}},{\\\"id\\\":\\\"THU\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Thule Air Base\\\",\\\"city\\\":\\\"Thule\\\",\\\"country\\\":\\\"Greenland\\\",\\\"iata\\\":\\\"THU\\\",\\\"icao\\\":\\\"BGTL\\\",\\\"latitude\\\":\\\"76.531197\\\",\\\"longitude\\\":\\\"-68.703201\\\",\\\"altitude\\\":251,\\\"timezone\\\":\\\"America/Thule\\\"}},{\\\"id\\\":\\\"AEY\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Akureyri Airport\\\",\\\"city\\\":\\\"Akureyri\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"AEY\\\",\\\"icao\\\":\\\"BIAR\\\",\\\"latitude\\\":\\\"65.660004\\\",\\\"longitude\\\":\\\"-18.072701\\\",\\\"altitude\\\":6,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"EGS\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Egilsstaðir Airport\\\",\\\"city\\\":\\\"Egilsstadir\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"EGS\\\",\\\"icao\\\":\\\"BIEG\\\",\\\"latitude\\\":\\\"65.283302\\\",\\\"longitude\\\":\\\"-14.4014\\\",\\\"altitude\\\":76,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"HFN\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Hornafjörður Airport\\\",\\\"city\\\":\\\"Hofn\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"HFN\\\",\\\"icao\\\":\\\"BIHN\\\",\\\"latitude\\\":\\\"64.295601\\\",\\\"longitude\\\":\\\"-15.2272\\\",\\\"altitude\\\":24,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"HZK\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Húsavík Airport\\\",\\\"city\\\":\\\"Husavik\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"HZK\\\",\\\"icao\\\":\\\"BIHU\\\",\\\"latitude\\\":\\\"65.952301\\\",\\\"longitude\\\":\\\"-17.426001\\\",\\\"altitude\\\":48,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"IFJ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Ísafjörður Airport\\\",\\\"city\\\":\\\"Isafjordur\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"IFJ\\\",\\\"icao\\\":\\\"BIIS\\\",\\\"latitude\\\":\\\"66.058098\\\",\\\"longitude\\\":\\\"-23.1353\\\",\\\"altitude\\\":8,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"KEF\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Keflavik International Airport\\\",\\\"city\\\":\\\"Keflavik\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"KEF\\\",\\\"icao\\\":\\\"BIKF\\\",\\\"latitude\\\":\\\"63.985001\\\",\\\"longitude\\\":\\\"-22.6056\\\",\\\"altitude\\\":171,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"PFJ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Patreksfjörður Airport\\\",\\\"city\\\":\\\"Patreksfjordur\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"PFJ\\\",\\\"icao\\\":\\\"BIPA\\\",\\\"latitude\\\":\\\"65.555801\\\",\\\"longitude\\\":\\\"-23.965\\\",\\\"altitude\\\":11,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"RKV\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Reykjavik Airport\\\",\\\"city\\\":\\\"Reykjavik\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"RKV\\\",\\\"icao\\\":\\\"BIRK\\\",\\\"latitude\\\":\\\"64.129997\\\",\\\"longitude\\\":\\\"-21.940599\\\",\\\"altitude\\\":48,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"SIJ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Siglufjörður Airport\\\",\\\"city\\\":\\\"Siglufjordur\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"SIJ\\\",\\\"icao\\\":\\\"BISI\\\",\\\"latitude\\\":\\\"66.133301\\\",\\\"longitude\\\":\\\"-18.9167\\\",\\\"altitude\\\":10,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"VEY\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Vestmannaeyjar Airport\\\",\\\"city\\\":\\\"Vestmannaeyjar\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"VEY\\\",\\\"icao\\\":\\\"BIVM\\\",\\\"latitude\\\":\\\"63.424301\\\",\\\"longitude\\\":\\\"-20.2789\\\",\\\"altitude\\\":326,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"YAM\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Sault Ste Marie Airport\\\",\\\"city\\\":\\\"Sault Sainte Marie\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YAM\\\",\\\"icao\\\":\\\"CYAM\\\",\\\"latitude\\\":\\\"46.485001\\\",\\\"longitude\\\":\\\"-84.509399\\\",\\\"altitude\\\":630,\\\"timezone\\\":\\\"America/Toronto\\\"}},{\\\"id\\\":\\\"YAY\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"St. Anthony Airport\\\",\\\"city\\\":\\\"St. Anthony\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YAY\\\",\\\"icao\\\":\\\"CYAY\\\",\\\"latitude\\\":\\\"51.391899\\\",\\\"longitude\\\":\\\"-56.083099\\\",\\\"altitude\\\":108,\\\"timezone\\\":\\\"America/St_Johns\\\"}},{\\\"id\\\":\\\"YAZ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Tofino / Long Beach Airport\\\",\\\"city\\\":\\\"Tofino\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YAZ\\\",\\\"icao\\\":\\\"CYAZ\\\",\\\"latitude\\\":\\\"49.079833\\\",\\\"longitude\\\":\\\"-125.775583\\\",\\\"altitude\\\":80,\\\"timezone\\\":\\\"America/Vancouver\\\"}},{\\\"id\\\":\\\"YBB\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Kugaaruk Airport\\\",\\\"city\\\":\\\"Pelly Bay\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBB\\\",\\\"icao\\\":\\\"CYBB\\\",\\\"latitude\\\":\\\"68.534401\\\",\\\"longitude\\\":\\\"-89.808098\\\",\\\"altitude\\\":56,\\\"timezone\\\":\\\"America/Edmonton\\\"}},{\\\"id\\\":\\\"YBC\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Baie Comeau Airport\\\",\\\"city\\\":\\\"Baie Comeau\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBC\\\",\\\"icao\\\":\\\"CYBC\\\",\\\"latitude\\\":\\\"49.1325\\\",\\\"longitude\\\":\\\"-68.204399\\\",\\\"altitude\\\":71,\\\"timezone\\\":\\\"America/Toronto\\\"}},{\\\"id\\\":\\\"YBG\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"CFB Bagotville\\\",\\\"city\\\":\\\"Bagotville\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBG\\\",\\\"icao\\\":\\\"CYBG\\\",\\\"latitude\\\":\\\"48.330601\\\",\\\"longitude\\\":\\\"-70.996399\\\",\\\"altitude\\\":522,\\\"timezone\\\":\\\"America/Toronto\\\"}},{\\\"id\\\":\\\"YBK\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Baker Lake Airport\\\",\\\"city\\\":\\\"Baker Lake\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBK\\\",\\\"icao\\\":\\\"CYBK\\\",\\\"latitude\\\":\\\"64.298897\\\",\\\"longitude\\\":\\\"-96.077797\\\",\\\"altitude\\\":59,\\\"timezone\\\":\\\"America/Winnipeg\\\"}},{\\\"id\\\":\\\"YBL\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Campbell River Airport\\\",\\\"city\\\":\\\"Campbell River\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBL\\\",\\\"icao\\\":\\\"CYBL\\\",\\\"latitude\\\":\\\"49.950802\\\",\\\"longitude\\\":\\\"-125.271004\\\",\\\"altitude\\\":346,\\\"timezone\\\":\\\"America/Vancouver\\\"}},{\\\"id\\\":\\\"YBR\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Brandon Municipal Airport\\\",\\\"city\\\":\\\"Brandon\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBR\\\",\\\"icao\\\":\\\"CYBR\\\",\\\"latitude\\\":\\\"49.91\\\",\\\"longitude\\\":\\\"-99.951897\\\",\\\"altitude\\\":1343,\\\"timezone\\\":\\\"America/Winnipeg\\\"}},{\\\"id\\\":\\\"YCB\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Cambridge Bay Airport\\\",\\\"city\\\":\\\"Cambridge Bay\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YCB\\\",\\\"icao\\\":\\\"CYCB\\\",\\\"latitude\\\":\\\"69.108101\\\",\\\"longitude\\\":\\\"-105.138\\\",\\\"altitude\\\":90,\\\"timezone\\\":\\\"America/Edmonton\\\"}}],\\\"links\\\":{\\\"first\\\":\\\"https://airportgap.dev-tester.com/api/airports\\\",\\\"self\\\":\\\"https://airportgap.dev-tester.com/api/airports\\\",\\\"last\\\":\\\"https://airportgap.dev-tester.com/api/airports?page=203\\\",\\\"prev\\\":\\\"https://airportgap.dev-tester.com/api/airports\\\",\\\"next\\\":\\\"https://airportgap.dev-tester.com/api/airports?page=2\\\"}}\",\n    \"language\": \"http\"\n  }\n]",
+                  "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": \"GET https://airportgap.dev-tester.com/api/airports HTTP/1.1\\n\",\n    \"language\": \"http\"\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": \"Status Code: 200\\ndate: Fri, 19 May 2023 14:02:45 GMT\\ncontent-type: application/json; charset=utf-8\\ntransfer-encoding: chunked\\nconnection: close\\nvary: Accept-Encoding, Origin\\nx-frame-options: SAMEORIGIN\\nx-xss-protection: 0\\nx-content-type-options: nosniff\\nx-download-options: noopen\\nx-permitted-cross-domain-policies: none\\nreferrer-policy: strict-origin-when-cross-origin\\netag: W/\\\"37f4286d3dd3278024683e8b0b63f0fa\\\"\\ncache-control: max-age=0, private, must-revalidate\\nx-request-id: f177aa18-403e-473b-984f-80f37b776d7b\\nx-runtime: 0.013887\\nstrict-transport-security: max-age=15724800; includeSubdomains\\ncontent-encoding: gzip\\ncf-cache-status: DYNAMIC\\nreport-to: {\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=4OSXRNKutN9fxUcY40QK2aNYbkmTlDuMo7ve2%2F51YRSuXOJ5mZFiCSpZYxtajMc4H2IDHF6t%2B7bCAY48fLk4pd%2FA4A7UI9%2F%2BV4JhQqKyW8VCPBZq%2B2iqvFUcxgIiVQ8Y70bgPkmX6H29OlDtJdH1snm5MIg0QMVe\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nnel: {\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nserver: cloudflare\\ncf-ray: 7c9ce11d7aa39b34-FRA\\nalt-svc: h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\\n\\n{\\\"data\\\":[{\\\"id\\\":\\\"GKA\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Goroka Airport\\\",\\\"city\\\":\\\"Goroka\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"GKA\\\",\\\"icao\\\":\\\"AYGA\\\",\\\"latitude\\\":\\\"-6.08169\\\",\\\"longitude\\\":\\\"145.391998\\\",\\\"altitude\\\":5282,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"MAG\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Madang Airport\\\",\\\"city\\\":\\\"Madang\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"MAG\\\",\\\"icao\\\":\\\"AYMD\\\",\\\"latitude\\\":\\\"-5.20708\\\",\\\"longitude\\\":\\\"145.789001\\\",\\\"altitude\\\":20,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"HGU\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Mount Hagen Kagamuga Airport\\\",\\\"city\\\":\\\"Mount Hagen\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"HGU\\\",\\\"icao\\\":\\\"AYMH\\\",\\\"latitude\\\":\\\"-5.82679\\\",\\\"longitude\\\":\\\"144.296005\\\",\\\"altitude\\\":5388,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"LAE\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Nadzab Airport\\\",\\\"city\\\":\\\"Nadzab\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"LAE\\\",\\\"icao\\\":\\\"AYNZ\\\",\\\"latitude\\\":\\\"-6.569803\\\",\\\"longitude\\\":\\\"146.725977\\\",\\\"altitude\\\":239,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"POM\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Port Moresby Jacksons International Airport\\\",\\\"city\\\":\\\"Port Moresby\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"POM\\\",\\\"icao\\\":\\\"AYPY\\\",\\\"latitude\\\":\\\"-9.44338\\\",\\\"longitude\\\":\\\"147.220001\\\",\\\"altitude\\\":146,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"WWK\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Wewak International Airport\\\",\\\"city\\\":\\\"Wewak\\\",\\\"country\\\":\\\"Papua New Guinea\\\",\\\"iata\\\":\\\"WWK\\\",\\\"icao\\\":\\\"AYWK\\\",\\\"latitude\\\":\\\"-3.58383\\\",\\\"longitude\\\":\\\"143.669006\\\",\\\"altitude\\\":19,\\\"timezone\\\":\\\"Pacific/Port_Moresby\\\"}},{\\\"id\\\":\\\"UAK\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Narsarsuaq Airport\\\",\\\"city\\\":\\\"Narssarssuaq\\\",\\\"country\\\":\\\"Greenland\\\",\\\"iata\\\":\\\"UAK\\\",\\\"icao\\\":\\\"BGBW\\\",\\\"latitude\\\":\\\"61.1605\\\",\\\"longitude\\\":\\\"-45.425999\\\",\\\"altitude\\\":112,\\\"timezone\\\":\\\"America/Godthab\\\"}},{\\\"id\\\":\\\"GOH\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Godthaab / Nuuk Airport\\\",\\\"city\\\":\\\"Godthaab\\\",\\\"country\\\":\\\"Greenland\\\",\\\"iata\\\":\\\"GOH\\\",\\\"icao\\\":\\\"BGGH\\\",\\\"latitude\\\":\\\"64.190903\\\",\\\"longitude\\\":\\\"-51.678101\\\",\\\"altitude\\\":283,\\\"timezone\\\":\\\"America/Godthab\\\"}},{\\\"id\\\":\\\"SFJ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Kangerlussuaq Airport\\\",\\\"city\\\":\\\"Sondrestrom\\\",\\\"country\\\":\\\"Greenland\\\",\\\"iata\\\":\\\"SFJ\\\",\\\"icao\\\":\\\"BGSF\\\",\\\"latitude\\\":\\\"67.012222\\\",\\\"longitude\\\":\\\"-50.711603\\\",\\\"altitude\\\":165,\\\"timezone\\\":\\\"America/Godthab\\\"}},{\\\"id\\\":\\\"THU\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Thule Air Base\\\",\\\"city\\\":\\\"Thule\\\",\\\"country\\\":\\\"Greenland\\\",\\\"iata\\\":\\\"THU\\\",\\\"icao\\\":\\\"BGTL\\\",\\\"latitude\\\":\\\"76.531197\\\",\\\"longitude\\\":\\\"-68.703201\\\",\\\"altitude\\\":251,\\\"timezone\\\":\\\"America/Thule\\\"}},{\\\"id\\\":\\\"AEY\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Akureyri Airport\\\",\\\"city\\\":\\\"Akureyri\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"AEY\\\",\\\"icao\\\":\\\"BIAR\\\",\\\"latitude\\\":\\\"65.660004\\\",\\\"longitude\\\":\\\"-18.072701\\\",\\\"altitude\\\":6,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"EGS\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Egilsstaðir Airport\\\",\\\"city\\\":\\\"Egilsstadir\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"EGS\\\",\\\"icao\\\":\\\"BIEG\\\",\\\"latitude\\\":\\\"65.283302\\\",\\\"longitude\\\":\\\"-14.4014\\\",\\\"altitude\\\":76,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"HFN\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Hornafjörður Airport\\\",\\\"city\\\":\\\"Hofn\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"HFN\\\",\\\"icao\\\":\\\"BIHN\\\",\\\"latitude\\\":\\\"64.295601\\\",\\\"longitude\\\":\\\"-15.2272\\\",\\\"altitude\\\":24,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"HZK\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Húsavík Airport\\\",\\\"city\\\":\\\"Husavik\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"HZK\\\",\\\"icao\\\":\\\"BIHU\\\",\\\"latitude\\\":\\\"65.952301\\\",\\\"longitude\\\":\\\"-17.426001\\\",\\\"altitude\\\":48,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"IFJ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Ísafjörður Airport\\\",\\\"city\\\":\\\"Isafjordur\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"IFJ\\\",\\\"icao\\\":\\\"BIIS\\\",\\\"latitude\\\":\\\"66.058098\\\",\\\"longitude\\\":\\\"-23.1353\\\",\\\"altitude\\\":8,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"KEF\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Keflavik International Airport\\\",\\\"city\\\":\\\"Keflavik\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"KEF\\\",\\\"icao\\\":\\\"BIKF\\\",\\\"latitude\\\":\\\"63.985001\\\",\\\"longitude\\\":\\\"-22.6056\\\",\\\"altitude\\\":171,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"PFJ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Patreksfjörður Airport\\\",\\\"city\\\":\\\"Patreksfjordur\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"PFJ\\\",\\\"icao\\\":\\\"BIPA\\\",\\\"latitude\\\":\\\"65.555801\\\",\\\"longitude\\\":\\\"-23.965\\\",\\\"altitude\\\":11,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"RKV\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Reykjavik Airport\\\",\\\"city\\\":\\\"Reykjavik\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"RKV\\\",\\\"icao\\\":\\\"BIRK\\\",\\\"latitude\\\":\\\"64.129997\\\",\\\"longitude\\\":\\\"-21.940599\\\",\\\"altitude\\\":48,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"SIJ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Siglufjörður Airport\\\",\\\"city\\\":\\\"Siglufjordur\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"SIJ\\\",\\\"icao\\\":\\\"BISI\\\",\\\"latitude\\\":\\\"66.133301\\\",\\\"longitude\\\":\\\"-18.9167\\\",\\\"altitude\\\":10,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"VEY\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Vestmannaeyjar Airport\\\",\\\"city\\\":\\\"Vestmannaeyjar\\\",\\\"country\\\":\\\"Iceland\\\",\\\"iata\\\":\\\"VEY\\\",\\\"icao\\\":\\\"BIVM\\\",\\\"latitude\\\":\\\"63.424301\\\",\\\"longitude\\\":\\\"-20.2789\\\",\\\"altitude\\\":326,\\\"timezone\\\":\\\"Atlantic/Reykjavik\\\"}},{\\\"id\\\":\\\"YAM\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Sault Ste Marie Airport\\\",\\\"city\\\":\\\"Sault Sainte Marie\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YAM\\\",\\\"icao\\\":\\\"CYAM\\\",\\\"latitude\\\":\\\"46.485001\\\",\\\"longitude\\\":\\\"-84.509399\\\",\\\"altitude\\\":630,\\\"timezone\\\":\\\"America/Toronto\\\"}},{\\\"id\\\":\\\"YAY\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"St. Anthony Airport\\\",\\\"city\\\":\\\"St. Anthony\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YAY\\\",\\\"icao\\\":\\\"CYAY\\\",\\\"latitude\\\":\\\"51.391899\\\",\\\"longitude\\\":\\\"-56.083099\\\",\\\"altitude\\\":108,\\\"timezone\\\":\\\"America/St_Johns\\\"}},{\\\"id\\\":\\\"YAZ\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Tofino / Long Beach Airport\\\",\\\"city\\\":\\\"Tofino\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YAZ\\\",\\\"icao\\\":\\\"CYAZ\\\",\\\"latitude\\\":\\\"49.079833\\\",\\\"longitude\\\":\\\"-125.775583\\\",\\\"altitude\\\":80,\\\"timezone\\\":\\\"America/Vancouver\\\"}},{\\\"id\\\":\\\"YBB\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Kugaaruk Airport\\\",\\\"city\\\":\\\"Pelly Bay\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBB\\\",\\\"icao\\\":\\\"CYBB\\\",\\\"latitude\\\":\\\"68.534401\\\",\\\"longitude\\\":\\\"-89.808098\\\",\\\"altitude\\\":56,\\\"timezone\\\":\\\"America/Edmonton\\\"}},{\\\"id\\\":\\\"YBC\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Baie Comeau Airport\\\",\\\"city\\\":\\\"Baie Comeau\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBC\\\",\\\"icao\\\":\\\"CYBC\\\",\\\"latitude\\\":\\\"49.1325\\\",\\\"longitude\\\":\\\"-68.204399\\\",\\\"altitude\\\":71,\\\"timezone\\\":\\\"America/Toronto\\\"}},{\\\"id\\\":\\\"YBG\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"CFB Bagotville\\\",\\\"city\\\":\\\"Bagotville\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBG\\\",\\\"icao\\\":\\\"CYBG\\\",\\\"latitude\\\":\\\"48.330601\\\",\\\"longitude\\\":\\\"-70.996399\\\",\\\"altitude\\\":522,\\\"timezone\\\":\\\"America/Toronto\\\"}},{\\\"id\\\":\\\"YBK\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Baker Lake Airport\\\",\\\"city\\\":\\\"Baker Lake\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBK\\\",\\\"icao\\\":\\\"CYBK\\\",\\\"latitude\\\":\\\"64.298897\\\",\\\"longitude\\\":\\\"-96.077797\\\",\\\"altitude\\\":59,\\\"timezone\\\":\\\"America/Winnipeg\\\"}},{\\\"id\\\":\\\"YBL\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Campbell River Airport\\\",\\\"city\\\":\\\"Campbell River\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBL\\\",\\\"icao\\\":\\\"CYBL\\\",\\\"latitude\\\":\\\"49.950802\\\",\\\"longitude\\\":\\\"-125.271004\\\",\\\"altitude\\\":346,\\\"timezone\\\":\\\"America/Vancouver\\\"}},{\\\"id\\\":\\\"YBR\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Brandon Municipal Airport\\\",\\\"city\\\":\\\"Brandon\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YBR\\\",\\\"icao\\\":\\\"CYBR\\\",\\\"latitude\\\":\\\"49.91\\\",\\\"longitude\\\":\\\"-99.951897\\\",\\\"altitude\\\":1343,\\\"timezone\\\":\\\"America/Winnipeg\\\"}},{\\\"id\\\":\\\"YCB\\\",\\\"type\\\":\\\"airport\\\",\\\"attributes\\\":{\\\"name\\\":\\\"Cambridge Bay Airport\\\",\\\"city\\\":\\\"Cambridge Bay\\\",\\\"country\\\":\\\"Canada\\\",\\\"iata\\\":\\\"YCB\\\",\\\"icao\\\":\\\"CYCB\\\",\\\"latitude\\\":\\\"69.108101\\\",\\\"longitude\\\":\\\"-105.138\\\",\\\"altitude\\\":90,\\\"timezone\\\":\\\"America/Edmonton\\\"}}],\\\"links\\\":{\\\"first\\\":\\\"https://airportgap.dev-tester.com/api/airports\\\",\\\"self\\\":\\\"https://airportgap.dev-tester.com/api/airports\\\",\\\"last\\\":\\\"https://airportgap.dev-tester.com/api/airports?page=203\\\",\\\"prev\\\":\\\"https://airportgap.dev-tester.com/api/airports\\\",\\\"next\\\":\\\"https://airportgap.dev-tester.com/api/airports?page=2\\\"}}\",\n    \"language\": \"http\"\n  }\n]",
                   "code": "api\n              .get(\"/airports\")\n              .expect(200)\n              .expect((res) => expect(res.body.data.length).to.eql(30)",
                   "err": {},
-                  "uuid": "079e8eca-3fd3-4f56-85a7-6fda61514d39",
-                  "parentUUID": "f463eaf0-337f-4f48-9558-5bd43780253a",
+                  "uuid": "d6387526-3e02-4649-bd75-b4f7dfdb2e31",
+                  "parentUUID": "575893f7-5a16-43d2-8bc1-fbed8a40040f",
                   "isHook": false,
                   "skipped": false,
                   "options": {
@@ -188,22 +90,23 @@
               ],
               "suites": [],
               "passes": [
-                "079e8eca-3fd3-4f56-85a7-6fda61514d39"
+                "d6387526-3e02-4649-bd75-b4f7dfdb2e31"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 850,
+              "duration": 823,
               "root": false,
               "rootEmpty": false,
               "_timeout": 15000,
               "options": {
                 "title": "GET /airports",
-                "description": "Returning all Airports."
+                "description": "Returning all Airports.",
+                "timeout": 15000
               }
             },
             {
-              "uuid": "7de2fadb-6024-4cf8-a430-358a6ea1db69",
+              "uuid": "ef038d32-b718-4656-89d6-a3deaaf29158",
               "title": "POST /airports/distance",
               "fullFile": "C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js",
               "file": "\\spec\\newAirports.test.js",
@@ -213,22 +116,18 @@
                 {
                   "title": "calculates the distance between two airports",
                   "fullTitle": "Airport Gap API POST /airports/distance calculates the distance between two airports",
-                  "timedOut": true,
-                  "duration": 20005,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
+                  "timedOut": false,
+                  "duration": 729,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
                   "pending": false,
-                  "context": null,
-                  "code": "api\n  .post(\"/airports/distance\")\n  .send({ from: \"KIX\", to: \"SFO\" })\n  .expect(200)\n  .expect((res) =>\n    expect(res.body.data.attributes).to.include.keys(\n      \"kilometers\",\n      \"miles\",\n      \"nautical_miles\"\n    )\n  );",
-                  "err": {
-                    "message": "Error: Timeout of 20000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js)",
-                    "estack": "Error: Timeout of 20000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js)\n    at listOnTimeout (node:internal/timers:564:17)\n    at process.processTimers (node:internal/timers:507:7)",
-                    "diff": null
-                  },
-                  "uuid": "13a6741d-81f0-468e-a5f1-8c3b12839c19",
-                  "parentUUID": "7de2fadb-6024-4cf8-a430-358a6ea1db69",
+                  "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": \"POST https://airportgap.dev-tester.com/api/airports/distance HTTP/1.1\\nContent-Type: application/json\\n\",\n    \"language\": \"http\"\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": \"Status Code: 200\\ndate: Fri, 19 May 2023 14:02:46 GMT\\ncontent-type: application/json; charset=utf-8\\ntransfer-encoding: chunked\\nconnection: close\\nx-frame-options: SAMEORIGIN\\nx-xss-protection: 0\\nx-content-type-options: nosniff\\nx-download-options: noopen\\nx-permitted-cross-domain-policies: none\\nreferrer-policy: strict-origin-when-cross-origin\\netag: W/\\\"7b7c7407520612ef644ae56a0ec72181\\\"\\ncache-control: max-age=0, private, must-revalidate\\nx-request-id: 15a9e88f-f060-42a0-a4c8-47a33a5cfa6d\\nx-runtime: 0.006577\\nvary: Origin\\nstrict-transport-security: max-age=15724800; includeSubdomains\\ncf-cache-status: DYNAMIC\\nreport-to: {\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=OLhpZtiZhcwnzafzB%2BDmI9J0SIvlI69CXQS6hKyGvTlS8dCNk9WV%2BqWQeVYIL5y1oLyiv2fXSykgxvInNSLeSbpFvUb33Fd9qMwy3Niq5SPTE2d%2FFiN1Hbm6CW263PZwINR208sgiPv%2BCCaenq0DKAZPX%2F6R6MEW\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nnel: {\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nserver: cloudflare\\ncf-ray: 7c9ce1222d1c18c7-FRA\\ncontent-encoding: gzip\\nalt-svc: h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\\n\\n{\\\"data\\\":{\\\"id\\\":\\\"KIX-SFO\\\",\\\"type\\\":\\\"airport_distance\\\",\\\"attributes\\\":{\\\"from_airport\\\":{\\\"id\\\":3158,\\\"name\\\":\\\"Kansai International Airport\\\",\\\"city\\\":\\\"Osaka\\\",\\\"country\\\":\\\"Japan\\\",\\\"iata\\\":\\\"KIX\\\",\\\"icao\\\":\\\"RJBB\\\",\\\"latitude\\\":\\\"34.427299\\\",\\\"longitude\\\":\\\"135.244003\\\",\\\"altitude\\\":26,\\\"timezone\\\":\\\"Asia/Tokyo\\\"},\\\"to_airport\\\":{\\\"id\\\":2672,\\\"name\\\":\\\"San Francisco International Airport\\\",\\\"city\\\":\\\"San Francisco\\\",\\\"country\\\":\\\"United States\\\",\\\"iata\\\":\\\"SFO\\\",\\\"icao\\\":\\\"KSFO\\\",\\\"latitude\\\":\\\"37.618999\\\",\\\"longitude\\\":\\\"-122.375\\\",\\\"altitude\\\":13,\\\"timezone\\\":\\\"America/Los_Angeles\\\"},\\\"kilometers\\\":8692.06650824004,\\\"miles\\\":5397.23985349201,\\\"nautical_miles\\\":4690.070954910591}}}\",\n    \"language\": \"http\"\n  }\n]",
+                  "code": "api\n              .post(\"/airports/distance\")\n              .send({ from: \"KIX\", to: \"SFO\" })\n              .expect(200)\n              .expect((res) =>\n                expect(res.body.data.attributes).to.include.keys(\n                  \"kilometers\",\n                  \"miles\",\n                  \"nautical_miles\"\n                )",
+                  "err": {},
+                  "uuid": "bde94dc1-53fc-4ec0-8b6c-028a897a349f",
+                  "parentUUID": "ef038d32-b718-4656-89d6-a3deaaf29158",
                   "isHook": false,
                   "skipped": false,
                   "options": {
@@ -238,23 +137,24 @@
                 }
               ],
               "suites": [],
-              "passes": [],
-              "failures": [
-                "13a6741d-81f0-468e-a5f1-8c3b12839c19"
+              "passes": [
+                "bde94dc1-53fc-4ec0-8b6c-028a897a349f"
               ],
+              "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 20005,
+              "duration": 729,
               "root": false,
               "rootEmpty": false,
-              "_timeout": 20000,
+              "_timeout": 15000,
               "options": {
                 "title": "POST /airports/distance",
-                "description": "Calculating distance etc."
+                "description": "Calculating distance etc.",
+                "timeout": 15000
               }
             },
             {
-              "uuid": "6c62b6f1-e8dc-481e-967c-fcd87fbfb5f9",
+              "uuid": "f568114c-1bb9-4839-94a3-0ee99231cb42",
               "title": "POST /favorites",
               "fullFile": "C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js",
               "file": "\\spec\\newAirports.test.js",
@@ -264,22 +164,18 @@
                 {
                   "title": "requires authentication",
                   "fullTitle": "Airport Gap API POST /favorites requires authentication",
-                  "timedOut": true,
-                  "duration": 15014,
-                  "state": "failed",
-                  "speed": null,
-                  "pass": false,
-                  "fail": true,
+                  "timedOut": false,
+                  "duration": 256,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
                   "pending": false,
-                  "context": null,
-                  "code": "api\n  .post(\"/favorites\")\n  .send({\n    airport_id: \"JFK\",\n    note: \"My usual layover when visiting family\",\n  })\n  .expect(401);",
-                  "err": {
-                    "message": "Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js)",
-                    "estack": "Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js)\n    at listOnTimeout (node:internal/timers:564:17)\n    at process.processTimers (node:internal/timers:507:7)",
-                    "diff": null
-                  },
-                  "uuid": "89fbf711-bcdb-4351-916a-42be8bb681aa",
-                  "parentUUID": "6c62b6f1-e8dc-481e-967c-fcd87fbfb5f9",
+                  "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": \"POST https://airportgap.dev-tester.com/api/favorites HTTP/1.1\\nContent-Type: application/json\\n\",\n    \"language\": \"http\"\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": \"Status Code: 401\\ndate: Fri, 19 May 2023 14:02:46 GMT\\ncontent-type: application/json; charset=utf-8\\ntransfer-encoding: chunked\\nconnection: close\\nx-frame-options: SAMEORIGIN\\nx-xss-protection: 0\\nx-content-type-options: nosniff\\nx-download-options: noopen\\nx-permitted-cross-domain-policies: none\\nreferrer-policy: strict-origin-when-cross-origin\\ncache-control: no-cache\\nx-request-id: 181d1733-a70d-4f09-a5d4-4f840b9d7937\\nx-runtime: 0.004539\\nvary: Origin\\nstrict-transport-security: max-age=15724800; includeSubdomains\\ncf-cache-status: DYNAMIC\\nreport-to: {\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=Z884v21vRitKBLmvSM9rCWXB8HimE4xPqTdYymDJar%2FQtJw47iIOZZkiVQPHkMNw9tvOyJlAfHk%2FjtlxvxDvoEyoae7PLC8lEUzCwOAqknkt5xVDt%2BpUkBfaRtJe%2F3AQQlGaQmFP%2FPBWbPAybF%2BSGn3Wkp9TCMNj\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nnel: {\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nserver: cloudflare\\ncf-ray: 7c9ce126ac801c26-FRA\\nalt-svc: h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\\n\\n{\\\"errors\\\":[{\\\"status\\\":\\\"401\\\",\\\"title\\\":\\\"Unauthorized\\\",\\\"detail\\\":\\\"You are not authorized to perform the requested action.\\\"}]}\",\n    \"language\": \"http\"\n  }\n]",
+                  "code": "api\n              .post(\"/favorites\")\n              .send({\n                airport_id: \"JFK\",\n                note: \"My usual layover when visiting family\",\n              })\n              .expect(401)",
+                  "err": {},
+                  "uuid": "15439f4d-2fcd-47a8-8d72-540fbff47a45",
+                  "parentUUID": "f568114c-1bb9-4839-94a3-0ee99231cb42",
                   "isHook": false,
                   "skipped": false,
                   "options": {
@@ -289,19 +185,150 @@
                 }
               ],
               "suites": [],
-              "passes": [],
-              "failures": [
-                "89fbf711-bcdb-4351-916a-42be8bb681aa"
+              "passes": [
+                "15439f4d-2fcd-47a8-8d72-540fbff47a45"
               ],
+              "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 15014,
+              "duration": 256,
               "root": false,
               "rootEmpty": false,
               "_timeout": 15000,
               "options": {
                 "title": "POST /favorites",
-                "description": "Should not work, because not authorized"
+                "description": "Should not work, because not authorized",
+                "timeout": 15000
+              }
+            },
+            {
+              "uuid": "99dd947b-540b-4b21-8c6c-d38a2fc4224d",
+              "title": "POST /favorites",
+              "fullFile": "C:\\Users\\Pascal\\Documents\\java-script-stuff\\Neue-Suite\\airportgap-spec\\spec\\newAirports.test.js",
+              "file": "\\spec\\newAirports.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "allows an user to create favorite airports",
+                  "fullTitle": "Airport Gap API POST /favorites allows an user to create favorite airports",
+                  "timedOut": false,
+                  "duration": 272,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": \"POST https://airportgap.dev-tester.com/api/favorites HTTP/1.1\\nAuthorization: Bearer token=TsxZ61MTN7cM7YJcu75raZmv\\nContent-Type: application/json\\n\",\n    \"language\": \"http\"\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": \"Status Code: 201\\ndate: Fri, 19 May 2023 14:02:46 GMT\\ncontent-type: application/json; charset=utf-8\\ncontent-length: 332\\nconnection: close\\nx-frame-options: SAMEORIGIN\\nx-xss-protection: 0\\nx-content-type-options: nosniff\\nx-download-options: noopen\\nx-permitted-cross-domain-policies: none\\nreferrer-policy: strict-origin-when-cross-origin\\netag: W/\\\"358def0c4fc43518a688e9e106b6e70c\\\"\\ncache-control: max-age=0, private, must-revalidate\\nx-request-id: 96214739-5c20-47a6-9a24-61b75052e39f\\nx-runtime: 0.010978\\nvary: Origin\\nstrict-transport-security: max-age=15724800; includeSubdomains\\ncf-cache-status: DYNAMIC\\nreport-to: {\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=94hgNT9%2BZZL%2Bd5fgMu7gFxQV1b%2FkwsQo9N4D04J%2B0YEjxKs7aCrf6mQ1e6IdKEllH2JFW%2BhQGoXtpit1B6oQ4YBLNYwrkINVebg341DkkOtuJcGESamdAc2fsE%2B%2FPuLUGS%2BhcPfyoGCNc4Xuo3lUbmphBhmsLdYa\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nnel: {\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\\nserver: cloudflare\\ncf-ray: 7c9ce1285ef23653-FRA\\nalt-svc: h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\\n\\n{\\\"data\\\":{\\\"id\\\":\\\"10344\\\",\\\"type\\\":\\\"favorite\\\",\\\"attributes\\\":{\\\"airport\\\":{\\\"id\\\":2983,\\\"name\\\":\\\"John F Kennedy International Airport\\\",\\\"city\\\":\\\"New York\\\",\\\"country\\\":\\\"United States\\\",\\\"iata\\\":\\\"JFK\\\",\\\"icao\\\":\\\"KJFK\\\",\\\"latitude\\\":\\\"40.639801\\\",\\\"longitude\\\":\\\"-73.7789\\\",\\\"altitude\\\":13,\\\"timezone\\\":\\\"America/New_York\\\"},\\\"note\\\":\\\"My usual layover when visiting family\\\"}}}\",\n    \"language\": \"http\"\n  }\n]",
+                  "code": "api\n              .post(\"/favorites\")\n              .set(\"Authorization\", `Bearer token=TsxZ61MTN7cM7YJcu75raZmv`)\n              .send({\n                airport_id: \"JFK\",\n                note: \"My usual layover when visiting family\",\n              })\n              .expect(201)\n              .expect((res) =>\n                expect(res.body.data.attributes.airport.name).to.eql(\n                  \"John F Kennedy International Airport\"\n                )\n              )\n              .expect((res) =>\n                expect(res.body.data.attributes.note).to.eql(\n                  \"My usual layover when visiting family\"\n                )",
+                  "err": {},
+                  "uuid": "70a6b7a8-8fec-4d34-af7a-5ca17a53cf0b",
+                  "parentUUID": "99dd947b-540b-4b21-8c6c-d38a2fc4224d",
+                  "isHook": false,
+                  "skipped": false,
+                  "options": {
+                    "title": "allows an user to create favorite airports",
+                    "description": "should pass"
+                  }
+                },
+                {
+                  "title": "allows an user to update favorite airports",
+                  "fullTitle": "Airport Gap API POST /favorites allows an user to update favorite airports",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "api\n              .put(`/favorites/${api.body.data[0].id}`)\n              .set(\"Authorization\", `Bearer token=TsxZ61MTN7cM7YJcu75raZmv`)\n              .send({\n                note: \"My usual layover when visiting family and friends\",\n              })\n              .expect(200)\n              .expect((res) =>\n                expect(res.body.data.attributes.airport.name).to.eql(\n                  \"John F Kennedy International Airport\"\n                )\n              )\n              .expect((res) =>\n                expect(res.body.data.attributes.note).to.eql(\n                  \"My usual layover when visiting family and friends\"\n                )",
+                  "err": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'data')",
+                    "estack": "TypeError: Cannot read properties of undefined (reading 'data')\n    at Context.<anonymous> (file:///C:/Users/Pascal/Documents/java-script-stuff/Neue-Suite/airportgap-spec/spec/newAirports.test.js:126:43)\n    at Context.<anonymous> (node_modules\\@catsjs\\core\\interface.cjs:53:23)\n    at process.processImmediate (node:internal/timers:471:21)",
+                    "diff": null
+                  },
+                  "uuid": "76864950-46f6-4609-b5c5-4a5db3e9263d",
+                  "parentUUID": "99dd947b-540b-4b21-8c6c-d38a2fc4224d",
+                  "isHook": false,
+                  "skipped": false,
+                  "options": {
+                    "title": "allows an user to update favorite airports",
+                    "description": "should pass"
+                  }
+                },
+                {
+                  "title": "allows an user to delete favorite airports",
+                  "fullTitle": "Airport Gap API POST /favorites allows an user to delete favorite airports",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "api\n              .delete(`/favorites/${api.body.data.id}`)\n              .set(\"Authorization\", `Bearer token=TsxZ61MTN7cM7YJcu75raZmv`)\n              .expect(204)",
+                  "err": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'data')",
+                    "estack": "TypeError: Cannot read properties of undefined (reading 'data')\n    at Context.<anonymous> (file:///C:/Users/Pascal/Documents/java-script-stuff/Neue-Suite/airportgap-spec/spec/newAirports.test.js:151:46)\n    at Context.<anonymous> (node_modules\\@catsjs\\core\\interface.cjs:53:23)\n    at process.processImmediate (node:internal/timers:471:21)",
+                    "diff": null
+                  },
+                  "uuid": "80a93e49-4045-43e3-9dd3-9f656021d1f3",
+                  "parentUUID": "99dd947b-540b-4b21-8c6c-d38a2fc4224d",
+                  "isHook": false,
+                  "skipped": false,
+                  "options": {
+                    "title": "allows an user to delete favorite airports",
+                    "description": "should pass"
+                  }
+                },
+                {
+                  "title": "Verify that the record was deleted",
+                  "fullTitle": "Airport Gap API POST /favorites Verify that the record was deleted",
+                  "timedOut": false,
+                  "duration": 0,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "api\n              .get(`/favorites/${api.body.data.id}`)\n              .set(\"Authorization\", `Bearer token=TsxZ61MTN7cM7YJcu75raZmv`)\n              .expect(404)",
+                  "err": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'data')",
+                    "estack": "TypeError: Cannot read properties of undefined (reading 'data')\n    at Context.<anonymous> (file:///C:/Users/Pascal/Documents/java-script-stuff/Neue-Suite/airportgap-spec/spec/newAirports.test.js:162:43)\n    at Context.<anonymous> (node_modules\\@catsjs\\core\\interface.cjs:53:23)\n    at process.processImmediate (node:internal/timers:471:21)",
+                    "diff": null
+                  },
+                  "uuid": "1d9f8946-d056-4794-9ef0-062635c5349a",
+                  "parentUUID": "99dd947b-540b-4b21-8c6c-d38a2fc4224d",
+                  "isHook": false,
+                  "skipped": false,
+                  "options": {
+                    "title": "Verify that the record was deleted",
+                    "description": "should pass"
+                  }
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "70a6b7a8-8fec-4d34-af7a-5ca17a53cf0b"
+              ],
+              "failures": [
+                "76864950-46f6-4609-b5c5-4a5db3e9263d",
+                "80a93e49-4045-43e3-9dd3-9f656021d1f3",
+                "1d9f8946-d056-4794-9ef0-062635c5349a"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 272,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 15000,
+              "options": {
+                "title": "POST /favorites",
+                "description": "Should work, because authorized",
+                "timeout": 15000
               }
             }
           ],
