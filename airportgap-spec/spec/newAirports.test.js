@@ -1,12 +1,5 @@
-import request from "supertest";
-import chai from "chai";
-
-const { expect } = chai;
-const api = request("https://airportgap.dev-tester.com/api");
-/*
 import { init } from "@catsjs/core";
-const { api } = await init();
-*/
+const { api, json, vars } = await init();
 
 describe(
   {
@@ -31,7 +24,7 @@ describe(
             api
               .get("/airports")
               .expect(200)
-              .expect((res) => expect(res.body.data.length).to.eql(30))
+              .expect((res) => json.of(res.body.data.length).to.eql(30))
         );
       }
     );
@@ -54,11 +47,9 @@ describe(
               .send({ from: "KIX", to: "SFO" })
               .expect(200)
               .expect((res) =>
-                expect(res.body.data.attributes).to.include.keys(
-                  "kilometers",
-                  "miles",
-                  "nautical_miles"
-                )
+                json
+                  .of(res.body.data.attributes)
+                  .to.include.keys("kilometers", "miles", "nautical_miles")
               )
         );
       }
@@ -106,14 +97,14 @@ describe(
               })
               .expect(201)
               .expect((res) =>
-                expect(res.body.data.attributes.airport.name).to.eql(
-                  "John F Kennedy International Airport"
-                )
+                json
+                  .of(res.body.data.attributes.airport.name)
+                  .to.eql("John F Kennedy International Airport")
               )
               .expect((res) =>
-                expect(res.body.data.attributes.note).to.eql(
-                  "My usual layover when visiting family"
-                )
+                json
+                  .of(res.body.data.attributes.note)
+                  .to.eql("My usual layover when visiting family")
               )
         );
         it(
@@ -130,14 +121,14 @@ describe(
               })
               .expect(200)
               .expect((res) =>
-                expect(res.body.data.attributes.airport.name).to.eql(
-                  "John F Kennedy International Airport"
-                )
+                json
+                  .of(res.body.data.attributes.airport.name)
+                  .to.eql("John F Kennedy International Airport")
               )
               .expect((res) =>
-                expect(res.body.data.attributes.note).to.eql(
-                  "My usual layover when visiting family and friends"
-                )
+                json
+                  .of(res.body.data.attributes.note)
+                  .to.eql("My usual layover when visiting family and friends")
               )
         );
 
