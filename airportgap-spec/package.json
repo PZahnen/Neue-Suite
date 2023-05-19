@@ -1,0 +1,16 @@
+{
+  "name": "airportgap-spec",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "@catsjs/core": "^1.0.0-beta.2",
+    "@catsjs/http": "^1.0.0-beta.2",
+    "@catsjs/json": "^1.0.0-beta.2",
+    "@catsjs/report": "^1.0.0-beta.2",
+    "mocha": "^10.2.0"
+  }
+}

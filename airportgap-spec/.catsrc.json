@@ -1,0 +1,10 @@
+{
+  "api": "https://swapi.dev/api",
+  "protocol": {
+    "plugin": "@catsjs/http"
+  },
+  "contentTypes": [
+    "@catsjs/json"
+  ],
+  "verbose": false
+}
